@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+
+
+    const a = "()()()";
+      const ans = !a.split("").reduce((acc, c) => {
+        return acc < 0 ? acc : c === "(" ? acc + 1 : c === ")" ? acc - 1 : acc;
+      }, 0);
+      console.log(ans);
+
+
+    //  var a="(())"
+    //  var arr=a.split("");
+
+
+    //  var answer = arr.reduce((open,close)=>{
+    //         if(close==="("){
+    //             open++;
+    //         }else{
+    //             open--;
+    //         }
+    //         return open;
+    //     },""); 
+
+    //  console.log(answer===0 ? true : false); //ternary operator
+
+
+    //  if(answer===0){
+    //     console.log("True");
+    //  }else{
+    //     console.log("False");
+    //  }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

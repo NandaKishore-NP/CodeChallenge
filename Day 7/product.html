@@ -1,0 +1,51 @@
+
+<!DOCTYPE <!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+
+    </head>
+    <body>
+        <div class="catalog">
+            
+            <div class="product" data-id="1" data-price="19.99">
+              
+              <h1>Tailored Jeans</h1>
+              <p class="price">$19.99</p>
+              <p>The jeans is good qualityss.</p>
+              <p><button onclick="addToCart(1)">Add to Cart</button></p>
+            </div>
+            
+            <div class="product" data-id="2" data-price="29.99">
+              
+              <h1>Cotton Shirt</h1>
+              <p class="price">$29.99</p>
+              <p>This shirt is awesome and comfortable to wear.</p>
+              <p><button onclick="addToCart(2)">Add to Cart</button></p>
+            </div>
+            
+          </div>
+      
+        
+        <script>
+
+function addToCart(id) {
+  
+  var product = document.querySelector('[data-id="' + id + '"]');
+  
+  var name = product.querySelector('h1').textContent;
+
+  var price = product.querySelector('.price').textContent;
+  
+  alert('You have added ' + name + ' (' + price + ') to your cart.');
+}
+        </script>
+    </body>
+</html>

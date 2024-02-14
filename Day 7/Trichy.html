@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function disp(id){
+        var str= document.querySelector('#input').textContent;
+        var location=str.substring(0,3);
+
+        var year=parseInt(str.substring(3,5));
+        var course= str.substring(5,9);
+        var roll=parseInt(str.substring(9));
+
+
+        
+        alert("Location:"+location);
+        alert("Start Year:"+year);
+        alert("Learning Path:"+course);
+        alert("Cohot Number:"+roll);
+    }
+</script>
+<body>
+    <div id="input" name="code">TRI24MERN053</div>
+    
+    <button onclick="disp()">Click</button>
+    
+</body>
+</html>
