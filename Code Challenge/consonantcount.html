@@ -9,21 +9,18 @@
     <button id="countbtn">OK</button>
 
     <script>
-        document.getElementById('countbtn').addEventListener('click', () => {
-            var text = document.getElementById('inputtext').value;
-            var consonants = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ';
-            var count = 0;
-            for (var i = 0; i < text.length; i++) {
-                if (consonants.includes(text[i])) {
-                    count++;
-                }
-            }
-            if (count === 0) {
-                alert('No Consonants');
+    
+        document.getElementById('countbtn').onclick = () => {
+            let input = document.getElementById('inputtext').value;
+            let consonantCount = input.replace(/[^bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/g, "").length;
+            if (consonantCount === 0) {
+                alert("No Consonants");
             } else {
-                alert('Number of consonants: ' + count);
+                alert(`Number of consonants ${consonantCount}`);
             }
-        });
+        };
     </script>
+</body>
+</html>
 </body>
 </html>
