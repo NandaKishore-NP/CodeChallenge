@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consonant Count</title>
+</head>
+<body>
+    <label for="inputtext">Enter the text:</label><br>
+    <input type="text" id="inputtext" name="inputtext"><br>
+    <button id="countbtn">OK</button>
+
+    <script>
+        document.getElementById('countbtn').addEventListener('click', () => {
+            var text = document.getElementById('inputtext').value;
+            var consonants = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ';
+            var count = 0;
+            for (var i = 0; i < text.length; i++) {
+                if (consonants.includes(text[i])) {
+                    count++;
+                }
+            }
+            if (count === 0) {
+                alert('No Consonants');
+            } else {
+                alert('Number of consonants: ' + count);
+            }
+        });
+    </script>
+</body>
+</html>
