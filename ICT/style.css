@@ -1,0 +1,26 @@
+body {
+    background-color: #fffacd;
+}
+#Ebill {
+    font-family: Arial;
+    width: 400px; /* in CSS requirement it is written 300px but all the content is colliding in the table cells so I have put 400px */
+    background-color: #5f9ea0;
+    color: white;
+    text-align: center;
+    border-collapse: collapse;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+#Ebill th, #Ebill td {
+    border: 2px solid #ddd;
+    padding: 8px;
+}
+#result {
+    color: #770080;
+    font-weight: bold;
+}
+h1 {
+    color: #FFFFFF;
+    font-family: "Courier New";
+    background-color: #ffa07a;
+}

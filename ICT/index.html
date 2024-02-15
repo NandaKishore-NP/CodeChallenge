@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Adi Electronics-Online Shopping</title>
+</head>
+<body onload="disableSubmit()">
+    <h1>Welcome to Adi- Online Shopping</h1>
+    <form  onsubmit="return calculateFinalAmount()">
+        <table id="Ebill">
+            <tr>
+                <td><label for="custname">Customer Name:</label></td>
+                <td><input type="text" id="custname" name="custname" required pattern="[A-Za-z\s]+" placeholder="Enter Customer Name"></td>
+            </tr>
+            <tr>
+                <td><label for="mobileNumber">Mobile Number:</label></td>
+                <td><input type="tel" id="mobileNumber" name="mobileNumber" required pattern="[789][0-9]{9}" placeholder="Enter your mobile no"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email ID:</label></td>
+                <td><input type="email" id="email" name="email" required placeholder="Enter Your Email"></td>
+            </tr>
+            <tr>
+                <td><label for="address">Billing Address:</label></td>
+                <td><textarea id="address" name="address" rows="5" cols="20" required placeholder="Enter Your Address"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="product">Choose Product:</label></td>
+                <td>
+                    <select id="product" name="product" required>
+                        <option value="1">TV</option>
+                        <option value="2">Refridgerator</option>
+                        <option value="3">Mobile</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="quantity">Enter Quantity:</label></td>
+                <td><input type="number" id="quantity" name="quantity" min="1" required placeholder="Enter Quantity"></td>
+            </tr>
+            <tr>
+                <td><label for="mode">Payment Mode:</label></td>
+                <td>
+                    <select id="mode" name="mode" required>
+                        <option value="1">Cash On Delivery</option>
+                        <option value="2">Debit Card</option>
+                        <option value="3">UPI Transfer</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="bill">Bag Total:</label></td>
+                <td><input type="number" id="bill" name="bill" required onFocus="this.value = calculateBagTotal()"></td>
+            </tr>
+            <tr>
+                <td><label for="coupon">Coupon Code:</label></td>
+                <td><input type="text" id="coupon" name="coupon" required readOnly onFocus="this.value = calculateCoupon()"></td>
+            </tr>
+                <td><label for="delivery">Delivery Options:</label></td>
+                    <td><input type="radio" id="express" name="delivery" value="Express" required> Express <br>
+                    <input type="radio" id="standard" name="delivery" value="Standard" required> Standard </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="checkbox" id="terms" name="terms" required onChange="activateButton(this)" autocomplete="off"><label for="terms">I Agree to the Terms & Conditions</label></td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    <input type="reset" id="reset" value="Clear" onClick="disableSubmit()"></td>
+                    <td>
+                        <input type="submit" id="submit" value="Chk.Amount Payable" disabled>
+                        
+                    </td>             
+                
+            </tr>
+            <tr>
+            <td colspan="2">
+                <div id="result"></div>
+            </td>
+        </tr>
+    </table>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
